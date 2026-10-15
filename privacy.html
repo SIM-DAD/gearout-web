@@ -1,63 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>GearOut site privacy: no cookies, no tracking</title>
-  <meta name="description" content="What this site collects: an aggregate daily page count with no cookie and no identifier, honoring Do Not Track. What the GearOut product collects is described in its data-flow statement.">
-  <link rel="stylesheet" href="css/site.css">
-  <link rel="icon" href="images/wordmark.svg" type="image/svg+xml">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy. GearOut.</title>
+  <meta name="description" content="What this website collects, what the early-access form does with your address, and where a GearOut installation's data goes.">
+  <link rel="canonical" href="https://gearout.app/privacy.html">
+  <meta name="author" content="SIM DAD LLC">
+  <meta name="theme-color" content="#1F5E3C">
+  <meta name="robots" content="noindex, follow">
+  <link rel="icon" type="image/svg+xml" href="/img/logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&family=Fraunces:opsz,wght@9..144,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/site.css">
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to main content</a>
-  <header class="site-header">
-    <div class="wrap">
-      <a class="brand" href="index.html"><svg viewBox="0 0 32 32" width="28" height="28" aria-hidden="true" focusable="false"><rect x="2" y="2" width="28" height="28" rx="6" fill="#1F5E3C"/><path d="M10 16h12M16 10v12" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"/></svg>GearOut</a>
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
-      <nav class="site-nav" id="site-nav" aria-label="Main">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="pricing.html">Pricing</a></li>
-          <li><a href="install.html">Install</a></li>
-          <li><a href="security.html">Security</a></li>
-          <li><a href="accessibility.html">Accessibility</a></li>
-          <li><a href="compare.html">Compare</a></li>
-        </ul>
-      </nav>
+  <a class="skip" href="#main">Skip to main content</a>
+
+  <nav class="nav" aria-label="Main">
+    <div class="nav-inner">
+      <a href="/" class="nav-brand" aria-label="GearOut home">
+        <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><rect x="2" y="2" width="28" height="28" rx="6" fill="#1F5E3C"/><path d="M10 16h12M16 10v12" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"/></svg>
+        GearOut
+      </a>
+      <div class="nav-links">
+        <a href="/">Back to GearOut</a>
+      </div>
     </div>
-  </header>
+  </nav>
 
-  <main id="main">
-    <div class="wrap">
-      <h1>Privacy</h1>
-      <p class="lede">This site sets no cookies, loads no third-party scripts or fonts, and stores nothing in your browser.</p>
+  <main id="main" class="page">
+    <p class="page-kicker">Legal</p>
+    <h1>Privacy</h1>
+    <p class="page-meta">GearOut &middot; SIM DAD LLC &middot; Effective October 15, 2026</p>
 
-      <h2>What this site collects</h2>
-      <ul>
-        <li>An aggregate daily page count: the day, the site name, and the page path, added to a counter. No address, no identifier, no user agent, nothing that can be tied to a person.</li>
-        <li>The counter is skipped entirely when your browser sends Do Not Track.</li>
-        <li>Email you send us is handled like any business correspondence and used only to reply.</li>
-      </ul>
+    <h2>1. This website</h2>
+    <p>This site keeps an aggregate daily count of page views through a first-party counter. The counter sets no cookie, stores no IP address, and is skipped when your browser sends a Do Not Track signal. Fonts load from Google Fonts, which receives your browser's request for the font files.</p>
 
-      <h2>What the GearOut product collects</h2>
-      <p>The product is installed per institution and holds what an equipment desk needs: a student's name, email, and course enrollment, plus reservations, fines, and holds. It holds no payment card data and no government identifiers. The hosting and data-flow statement, the security summary, and the FERPA school-official data processing agreement template describe this in full; see <a href="security.html">Security</a> for the document list.</p>
+    <h2>2. The early-access form</h2>
+    <p>The form on the early-access page sends your email address, and the name and note if you add them, to a SIM DAD LLC service hosted on Cloudflare. We use the address to reply about the evaluation and for nothing else. It joins no mailing list and is not shared. Write to <a href="mailto:ap@simdadllc.com?subject=GearOut%20privacy">ap@simdadllc.com</a> to have it deleted.</p>
 
-      <h2>Contact</h2>
-      <p>SIM DAD LLC, <span class="placeholder">[owner to set: contact email]</span>.</p>
-    </div>
+    <h2>3. A GearOut installation</h2>
+    <p>GearOut runs as one stack for one institution. SIM DAD receives no telemetry and no usage data from an installation, and nothing in the software reports back to us. Data crosses the stack's boundary only for the purposes the installation serves:</p>
+    <ul>
+      <li>The institution's identity provider, for sign-in: email, display name, and the attributes the institution releases.</li>
+      <li>The learning management system, through LTI 1.3: launch claims and, for roster sync, the course membership.</li>
+      <li>The institution's own email relay, for the notices a student gets about their reservation.</li>
+      <li>A certificate authority, when the installation uses Let's Encrypt: the public hostname.</li>
+      <li>The SSOReady broker, only when the institution chooses SAML sign-in.</li>
+    </ul>
+    <p>No data from an installation is sent to an advertising network, an analytics service, or an AI service.</p>
+    <p>For a self-hosted image or sealed media, the institution holds the server, the keys, and the backups, and SIM DAD has no standing access. For managed hosting, SIM DAD operates the stack under a Data Processing Agreement that names the institution as the owner of the data and SIM DAD as its school official for that purpose. The full hosting and data-flow statement, which lists every flow by delivery option, is sent with the security packet.</p>
+
+    <h2>4. Data retention</h2>
+    <p>The page counter keeps only daily totals. An early-access request is kept until it has been answered and the evaluation has ended, or until you ask for it to be deleted. Data inside an installation is retained according to the institution's own policy; the software never deletes it on its own.</p>
+
+    <h2>5. Changes</h2>
+    <p>If this page changes, the effective date above changes with it. The current version is always at this address.</p>
+
+    <h2>6. Contact</h2>
+    <p>SIM DAD LLC, an Illinois limited liability company. <a href="mailto:ap@simdadllc.com?subject=GearOut%20privacy">ap@simdadllc.com</a></p>
   </main>
 
-  <footer class="site-footer">
-    <div class="wrap">
-      <p>SIM DAD LLC. GearOut is licensed from Southern Illinois University Edwardsville.</p>
-      <p>GearOut was developed at Southern Illinois University Edwardsville and is licensed exclusively to SIM DAD LLC by the Board of Trustees of Southern Illinois University.</p>
-      <ul>
-        <li><a href="privacy.html">Privacy</a></li>
-        <li><a href="accessibility.html">Accessibility</a></li>
-        <li><a href="security.html">Security</a></li>
-      </ul>
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand">GearOut</div>
+        <div class="footer-sub">A product of SIM DAD LLC</div>
+      </div>
+      <nav class="footer-links" aria-label="Footer">
+        <a href="/eula.html">License terms</a>
+        <a href="/privacy.html" aria-current="page">Privacy</a>
+        <a href="https://simdadllc.com">SIM DAD</a>
+      </nav>
     </div>
+    <p class="footer-copy">&copy; 2026 SIM DAD LLC. All rights reserved.</p>
   </footer>
-  <script src="js/site.js"></script>
+
+  <!-- First-party, cookie-free page counter (aggregate daily counts only; no cookies, no IP stored, honors Do Not Track) -->
+  <script>
+    (function () {
+      try {
+        if (navigator.doNotTrack === "1" || window.doNotTrack === "1") return;
+        if (!navigator.sendBeacon) return;
+        navigator.sendBeacon("https://simdad-hits.ap-493.workers.dev/hit",
+          JSON.stringify({ site: "gearout", path: location.pathname }));
+      } catch (e) {}
+    })();
+  </script>
 </body>
 </html>

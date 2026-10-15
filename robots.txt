@@ -1,3 +1,5 @@
 User-agent: *
 Allow: /
-Sitemap: https://[gearout-domain]/sitemap.xml
+Disallow: /beta/
+
+Sitemap: https://gearout.app/sitemap.xml

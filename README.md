@@ -1,61 +1,45 @@
 # gearout-web
 
-The GearOut marketing site: plain HTML and CSS, no framework, no build step, published from
-`main` on GitHub Pages, the same way the other SIM DAD product sites are built.
-
-Nothing here is public yet. Publishing waits on the gate in the messaging source
-(`gearout-v2-plan/marketing/00-messaging.md`): the SIUE technology-transfer license executed
-and the consent to name SIUE as the reference deployment.
+The GearOut product site: plain HTML and CSS, no framework, no build step, published from
+`main` on GitHub Pages the same way the other SIM DAD product sites are. Domain: gearout.app
+(registered at Cloudflare, 2026-10-06).
 
 ## Pages
 
 | File | Purpose |
 |---|---|
-| `index.html` | Value line, what it does by role, three proof points, pricing summary, buyer questions |
-| `pricing.html` | The centerpiece: software tiers, delivery options, worked totals, what is not on the sheet |
-| `install.html` | The one command, what the installer asks, the four delivery options |
-| `security.html` | Architecture, identity, data protection, what is not claimed, documents available on request |
-| `accessibility.html` | WCAG 2.1 AA target, VPAT status, the DOJ Title II date, what a tester can check |
-| `compare.html` | The field comparison with its sources |
-| `privacy.html` | What this site collects (an aggregate daily count) and a pointer to the product's data-flow statement |
+| `index.html` | What it is, who it is for, how it works in four steps, a described sample desk, the three tiers and two delivery options, buyer questions, early access |
+| `beta/index.html` | The early-access request form, posting to the shared SIM DAD beta worker with `product=gearout` (noindex) |
+| `eula.html` | License terms, a summary; the full agreements are sent with every quote |
+| `privacy.html` | What the site collects, what the form does with an address, where an installation's data goes |
 
-Shared: `css/site.css` (palette and contrast ratios in the header comment), `js/site.js`
-(nav toggle and the page counter), `images/wordmark.svg`, `images/flow.svg`.
+Shared: `css/site.css` (palette and measured contrast ratios in the header comment),
+`img/logo.svg`, `img/social-share.png`.
+
+## Sources of record
+
+- Prices: `comms/press-2026-08/release-4-gearout-launch.md` (ratified 2026-09-18). The site names the
+  Managed and Self-hosted options only; the appliance price waits on the support and liability boundary
+  and the carrier confirmation named in that file.
+- Feature claims: the GearOut 2.0 docs on branch `v2/phase1` (`docs/help/`, `docs/install.md`,
+  `docs/sso.md`, `docs/compliance/hosting-and-data-flow.md`, `docs/legal/`).
+- The two sentences about the university: OTMIR consent under license 8.13, 2026-09-29
+  (`otmir-gearout/8-13-consent-2026-09-29.md`). Nothing else about the university appears on the site:
+  no department, no people, no logo, no screenshot.
 
 ## Publish
 
-1. Create the repository `SIM-DAD/gearout-web` (public) and push this folder to `main`.
-2. Settings, Pages: deploy from a branch, `main`, root. `.nojekyll` is present so Pages serves
-   the files as they are.
-3. Register the product domain, then substitute the placeholder (see below) and set the same
-   name in `CNAME`. In DNS, point the apex at the four GitHub Pages A records and `www` at
-   `sim-dad.github.io`, then turn on "Enforce HTTPS" once the certificate is issued.
-4. Add `"gearout"` to the `SITES` allow-list in the page-counter worker
-   (`C:\pythia\work\simdad-hits\worker.js`, deployed as `simdad-hits.ap-493.workers.dev`) and
-   redeploy it; until then the worker drops this site's beacons. The beacon posts JSON
-   `{ "site": "gearout", "path": "<pathname>" }` to `/hit`, which is the shape the worker reads.
-
-## Placeholders to substitute before publishing
-
-| Placeholder | Where | Replace with |
-|---|---|---|
-| `[gearout-domain]` | `CNAME`, `robots.txt`, `sitemap.xml` | the registered product domain |
-| `[owner to set: sales email]` | every `mailto:` link and the contact lines | the sales address |
-| `[owner to set: contact email]` | `privacy.html` | the privacy contact address |
-| `[owner to set: asset cap in 2.0]` | `pricing.html` | the Starter asset cap |
-| `[owner to set: what Campus adds beyond Department in 2.0, ...]` | `pricing.html` | the Campus definition |
-| `[owner to set: which of these, if any, are tier-limited]` | `pricing.html` | tier limits, or delete the sentence |
-| `[owner to set: support hours and response target]` | `pricing.html` | the support terms |
-| `[owner to set]` (training, connectors, multi-year) | `pricing.html` | the terms, or delete the line |
-| `[owner to confirm: license executed]` | every footer | delete the bracket once the license is executed, or remove the sentence |
-| `[owner to confirm consent]` | every footer | delete the bracket once SIUE consents, or remove the reference-deployment line |
-
-Placeholders render with a dashed yellow box (`.placeholder`) so none can slip into a
-published page unnoticed. Search for `[owner` before every publish.
+1. Create the repository `SIM-DAD/gearout-web` (public) and push `main`.
+2. Settings, Pages: deploy from a branch, `main`, root. `.nojekyll` is present.
+3. Settings, Pages, custom domain: `gearout.app`. DNS is at Cloudflare: a CNAME for `www` to
+   `sim-dad.github.io` and the four GitHub Pages A records on the apex (or a CNAME-flattened apex),
+   proxy off until the certificate is issued, then "Enforce HTTPS".
+4. Add `https://gearout.app` to the beta worker's CORS origins (`simdad-checkout`) and `"gearout"` to
+   the `SITES` allow-list of the page-counter worker (`simdad-hits`); until then the worker drops this
+   site's beacons and the form's POST is refused by the browser.
 
 ## Checks before a push
 
-- `grep -rn "\xe2\x80\x94" *.html` returns nothing (no em dashes).
-- Every page parses with Python's `html.parser` and has exactly one `h1`.
-- Every internal link resolves to a file in this folder.
-- `grep -rn "\[owner" *.html` lists only placeholders you intend to leave for that publish.
+- `python "C:/pythia/tools/prose_lint.py" --links index.html beta/index.html eula.html privacy.html` at 0 FAIL.
+- `python "C:/pythia/tools/web_qa.py" <files> --widths 390,768,1440 --dark` clean, screenshots read.
+- No em dashes, every page parses, exactly one `h1` per page, every internal link resolves.
