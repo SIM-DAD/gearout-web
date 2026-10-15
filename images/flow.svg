@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 200" width="640" height="200" role="img" aria-labelledby="flow-title flow-desc">
+  <title id="flow-title">How a reservation moves through GearOut</title>
+  <desc id="flow-desc">Three steps left to right: a phone where the student reserves, a desk scanner that checks gear out and in, and the institution's own server stack behind both. Arrows connect the phone and the scanner to the stack.</desc>
+  <!-- 1: phone -->
+  <rect x="40" y="40" width="64" height="120" rx="10" fill="#FFFFFF" stroke="#1B1B1F" stroke-width="3"/>
+  <rect x="52" y="58" width="40" height="70" rx="3" fill="#E8E1D0"/>
+  <circle cx="72" cy="146" r="5" fill="#1B1B1F"/>
+  <circle cx="20" cy="40" r="14" fill="#1F5E3C"/>
+  <text x="20" y="45" text-anchor="middle" font-family="system-ui, Arial, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF">1</text>
+  <!-- 2: scanner -->
+  <rect x="220" y="70" width="110" height="60" rx="8" fill="#FFFFFF" stroke="#1B1B1F" stroke-width="3"/>
+  <rect x="236" y="86" width="78" height="28" rx="3" fill="#E8E1D0"/>
+  <path d="M244 92v16M252 92v16M262 92v16M268 92v16M280 92v16M290 92v16M298 92v16M306 92v16" stroke="#1B1B1F" stroke-width="2"/>
+  <circle cx="200" cy="40" r="14" fill="#1F5E3C"/>
+  <text x="200" y="45" text-anchor="middle" font-family="system-ui, Arial, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF">2</text>
+  <!-- 3: stack -->
+  <rect x="470" y="40" width="130" height="30" rx="5" fill="#FFFFFF" stroke="#1B1B1F" stroke-width="3"/>
+  <rect x="470" y="85" width="130" height="30" rx="5" fill="#FFFFFF" stroke="#1B1B1F" stroke-width="3"/>
+  <rect x="470" y="130" width="130" height="30" rx="5" fill="#FFFFFF" stroke="#1B1B1F" stroke-width="3"/>
+  <circle cx="486" cy="55" r="4" fill="#1F5E3C"/><circle cx="486" cy="100" r="4" fill="#1F5E3C"/><circle cx="486" cy="145" r="4" fill="#1F5E3C"/>
+  <circle cx="450" cy="40" r="14" fill="#1F5E3C"/>
+  <text x="450" y="45" text-anchor="middle" font-family="system-ui, Arial, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF">3</text>
+  <!-- arrows -->
+  <path d="M110 100h100" stroke="#1B1B1F" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+  <path d="M336 100h124" stroke="#1B1B1F" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10z" fill="#1B1B1F"/>
+    </marker>
+  </defs>
+</svg>

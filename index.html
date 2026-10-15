@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GearOut: equipment checkout for media programs</title>
+  <meta name="description" content="GearOut lets a media program run its equipment cage from a phone and a scanner, gated by the course roster, on a stack the institution controls, at a published price per program.">
+  <link rel="stylesheet" href="css/site.css">
+  <link rel="icon" href="images/wordmark.svg" type="image/svg+xml">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html"><svg viewBox="0 0 32 32" width="28" height="28" aria-hidden="true" focusable="false"><rect x="2" y="2" width="28" height="28" rx="6" fill="#1F5E3C"/><path d="M10 16h12M16 10v12" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"/></svg>GearOut</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav class="site-nav" id="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="install.html">Install</a></li>
+          <li><a href="security.html">Security</a></li>
+          <li><a href="accessibility.html">Accessibility</a></li>
+          <li><a href="compare.html">Compare</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="wrap">
+      <section class="hero">
+        <p class="badge">Equipment checkout for media programs</p>
+        <h1>Run the equipment cage from a phone and a scanner, on a stack your institution controls.</h1>
+        <p class="lede">GearOut gates checkout by the course roster, runs as one installation per institution, and is priced per program at a published price: not per administrator seat and not by quote.</p>
+        <div class="actions">
+          <a class="btn" href="pricing.html">See the pricing</a>
+          <a class="btn btn-secondary" href="mailto:[owner%20to%20set:%20sales%20email]?subject=GearOut%20Teams%20call">Book a Teams call</a>
+        </div>
+        <figure class="hero-figure">
+          <img src="images/flow.svg" width="640" height="200" alt="Three steps: a phone where the student reserves, a desk scanner that checks gear out and in, and the institution's own server stack behind both.">
+          <figcaption>1. The student reserves from a phone. 2. The desk scans a gear label or the student's pass. 3. Everything runs on the institution's own stack.</figcaption>
+        </figure>
+      </section>
+
+      <h2>What it does</h2>
+      <div class="grid grid-2">
+        <section class="card">
+          <h3>For students</h3>
+          <ul>
+            <li>Reserve from a phone: pick blocks on the calendar and confirm from the bottom bar.</li>
+            <li>Show a 6-character pickup code or a QR pass at the desk. The pass opens offline.</li>
+            <li>Get the emails that matter: the confirmation, a reminder at 5:00 PM the day before, a waitlist offer when a slot opens.</li>
+          </ul>
+        </section>
+        <section class="card">
+          <h3>For the desk</h3>
+          <ul>
+            <li>Scan either direction. A gear label or a student's pass resolves to check out or check in with one button.</li>
+            <li>See who has what, what is overdue, and what is due today on one board.</li>
+            <li>Approve renewals, record damage, settle fines, and open any student's profile from any table.</li>
+          </ul>
+        </section>
+        <section class="card">
+          <h3>For the department</h3>
+          <ul>
+            <li>Eligibility follows the course. An instructor launches GearOut from Blackboard and the roster syncs through LTI 1.3; every enrolled student is eligible. No central-IT directory sync. <span class="badge">Roadmap: Canvas</span></li>
+            <li>Rules you set: schedule blocks, a weekly limit of three time slots per student, fines, holds, waitlists with 24-hour offers, production briefs.</li>
+            <li>Reports: utilization, overdue, fines, and per course, with CSV export.</li>
+            <li>Your branding: institution and department names, colors checked for contrast, your official logo.</li>
+          </ul>
+        </section>
+        <section class="card">
+          <h3>For campus IT and the accessibility office</h3>
+          <ul>
+            <li>One stack per institution. Your data on your stack: self-hosted, on sealed media, or as an appliance. PostgreSQL row-level security, secrets encrypted at rest, TLS in front.</li>
+            <li>Sign-in through your identity provider: Microsoft Entra ID, Google Workspace, or SAML 2.0 (Shibboleth, ADFS, Okta) through SSOReady.</li>
+            <li>Built to WCAG 2.1 AA. A VPAT 2.4 report is in preparation ahead of the April 26, 2027 DOJ Title II deadline. <a href="accessibility.html">Accessibility status</a></li>
+            <li>No AI feature touches student data. Nothing calls home. Small footprint: 2 vCPU, 4 GB RAM, one install command.</li>
+          </ul>
+        </section>
+      </div>
+
+      <h2>Three facts to check us on</h2>
+      <ol>
+        <li><strong>Roster gating the department turns on itself.</strong> GearOut is an LTI 1.3 tool. An instructor launches it from the course in Blackboard, the roster syncs through Names and Role Provisioning Services, and every enrolled student becomes eligible.</li>
+        <li><strong>A published, flat price per program.</strong> The Department tier is $1,788 per year. The lowest published price at the closest higher-education competitor is about $6,624 per year, because it is priced per administrator with a three-administrator minimum (<a href="compare.html#sources">sources</a>).</li>
+        <li><strong>One stack per institution.</strong> The institution's data lives on its own stack, which it can host itself, receive on sealed media, or take as an appliance. No student data passes through SIM DAD.</li>
+      </ol>
+
+      <h2>Pricing, published</h2>
+      <div class="table-wrap">
+        <table>
+          <caption>Software tiers, per program, per year</caption>
+          <thead><tr><th scope="col">Tier</th><th scope="col" class="num">Per year</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Starter</th><td class="num">$708</td></tr>
+            <tr><th scope="row">Department</th><td class="num">$1,788</td></tr>
+            <tr><th scope="row">Campus</th><td class="num">$3,948</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>One-time provisioning for self-hosted, sealed-media, and appliance delivery: $750, $900, and $1,500 plus hardware at cost. Managed delivery is included. <a href="pricing.html">Full pricing sheet</a></p>
+
+      <h2>Questions a buyer asks</h2>
+      <dl class="facts">
+        <dt>How many universities use it?</dt>
+        <dd>One, in production during 2026. GearOut 2.0 is the version built for other institutions. We would rather be honest about the count than pad it.</dd>
+        <dt>Do you have SOC 2?</dt>
+        <dd>No. GearOut is built so it does not need to hold your data: the self-hosted, sealed-media, and appliance options keep every record on your stack. The managed option is SIM DAD running one stack for you, never a shared database. <a href="security.html">Security</a></dd>
+        <dt>Does it work with our identity provider?</dt>
+        <dd>Entra ID, Google Workspace, and SAML 2.0 (Shibboleth, ADFS, Okta) through SSOReady. Your identity team registers one redirect URI. <span class="badge">Roadmap: verified against a campus Shibboleth IdP</span></dd>
+        <dt>Does it work with our LMS?</dt>
+        <dd>Blackboard today through LTI 1.3 with roster sync. Rosters can also be uploaded as a CSV with a preview before anything is written. <span class="badge">Roadmap: Canvas adapter</span></dd>
+        <dt>Is there a mobile app?</dt>
+        <dd>GearOut is an installable web app. Students add it to the home screen, the pass opens offline, and there is no second app-store surface to keep accessible.</dd>
+        <dt>Can we buy it on a card?</dt>
+        <dd>The Starter and Department tiers plus any provisioning fee stay under common purchasing-card thresholds. The Campus tier with the appliance option is the one combination that can cross into full procurement, and it is scoped for that.</dd>
+      </dl>
+
+      <h2>Next step</h2>
+      <p>A 20-minute Teams call with your desk staff in the room. Write to <span class="placeholder">[owner to set: sales email]</span>.</p>
+      <div class="actions">
+        <a class="btn" href="mailto:[owner%20to%20set:%20sales%20email]?subject=GearOut%20Teams%20call">Book a Teams call</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>SIM DAD LLC. GearOut is licensed from Southern Illinois University Edwardsville.</p>
+      <p>GearOut was developed at Southern Illinois University Edwardsville and is licensed exclusively to SIM DAD LLC by the Board of Trustees of Southern Illinois University.</p>
+      <ul>
+        <li><a href="privacy.html">Privacy</a></li>
+        <li><a href="accessibility.html">Accessibility</a></li>
+        <li><a href="security.html">Security</a></li>
+      </ul>
+    </div>
+  </footer>
+  <script src="js/site.js"></script>
+</body>
+</html>
