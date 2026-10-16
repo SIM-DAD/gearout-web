@@ -19,8 +19,9 @@ Shared: `css/site.css` (palette and measured contrast ratios in the header comme
 ## Sources of record
 
 - Prices: `comms/press-2026-08/release-4-gearout-launch.md` (ratified 2026-09-18). The site names the
-  Managed and Self-hosted options only; the appliance price waits on the support and liability boundary
-  and the carrier confirmation named in that file.
+  Self-hosted image and Sealed media options only. Managed (hosted) is off the sheet until a written data
+  agreement, cyber coverage, and a measured hosting cost exist. The appliance price waits on the support and liability boundary and the carrier confirmation named
+  in that file.
 - Feature claims: the GearOut 2.0 docs on branch `v2/phase1` (`docs/help/`, `docs/install.md`,
   `docs/sso.md`, `docs/compliance/hosting-and-data-flow.md`, `docs/legal/`).
 - The two sentences about the university: OTMIR consent under license 8.13, 2026-09-29
